@@ -16,6 +16,8 @@ import java.util.List;
  * @author Marilia Nayara, Patricia Lopes, Gustavo Almeida, Eddie
  */
 public class BancoCategoria {
+    
+    
     public BancoCategoria(){
         
     }
