@@ -17,6 +17,7 @@ public class Categoria {
     
     //métodos
     public int getCodigo() {
+        
         return Codigo;
     }
 
