@@ -12,10 +12,7 @@ import Utilitarios.BancoProduto;
 import java.sql.SQLException;
 import java.util.List;
 
-/**
- *
- * @author ElissonRocha
- */
+
 public class NegociosProduto {
     public int salvar(String nome, float pcusto, float pvenda, String categ) throws SQLException {
         Produto produto = new Produto();
