@@ -12,6 +12,10 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.List;
 
+/**
+ *
+ * @author Marilia Nayara, Patricia Lopes, Gustavo Almeida, Eddie
+ */
 
 public class NegociosCompra {
     public int salvar(int cpf_c, Timestamp data, boolean isEntrega, float preco_final, List<Integer> lista_prod, List<Integer> quantidades) {
