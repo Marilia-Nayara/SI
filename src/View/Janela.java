@@ -1559,7 +1559,29 @@ public class Janela extends javax.swing.JFrame {
     }//GEN-LAST:event_CEditarActionPerformed
 
     private void jCCConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCCConfirmarActionPerformed
-        
+// TODO add your handling code here:
+        if(CComboNomeText.getSelectedItem().toString().length()!= 0){
+            String Nome = CComboNomeText.getSelectedItem().toString();
+            NegociosCliente nc = new NegociosCliente();
+            List<Cliente> listCliente = nc.listaCliente(Nome);
+            String cpf = listCliente.get(0).getCPF();
+            CPFText.setText(cpf);
+            CComboNomeText.removeAllItems();
+            CComboNomeText.addItem(listCliente.get(0).getNome());
+            CComboNomeText.setEnabled(false);
+            LogradouroText.setText(listCliente.get(0).getEndereco().getRua());
+            LogradouroText.setEnabled(false);
+            NumeroText.setText(""+listCliente.get(0).getEndereco().getNumero());
+            BairroText.setText(listCliente.get(0).getEndereco().getBairro());
+            CidadeText.setText(listCliente.get(0).getEndereco().getCidade());
+            EstadoText.setText(listCliente.get(0).getEndereco().getEstado());
+            TelefoneText.setText(""+listCliente.get(0).getTelefone());
+            EmailText.setText(listCliente.get(0).getEmail());
+            CEditar.setVisible(true);
+            CExcluir.setVisible(true);
+            jCCConfirmar.setVisible(false);
+            jCCPesquisar.setVisible(false);
+        }        
     }//GEN-LAST:event_jCCConfirmarActionPerformed
 
     private void jCCPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCCPesquisarActionPerformed
