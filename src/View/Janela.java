@@ -1439,7 +1439,22 @@ public class Janela extends javax.swing.JFrame {
     }//GEN-LAST:event_IncluirActionPerformed
 
     private void ConfirmarCatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmarCatActionPerformed
-        
+ // TODO add your handling code here:
+        jLabelProduto.setVisible(true);
+        String categoria = jComboCategoria.getSelectedItem().toString();
+        NegociosProduto np = new NegociosProduto();
+        NegociosCategoria nc = new NegociosCategoria();
+        Categoria categ = nc.ProcurarCategoria(categoria);
+        List<Produto> listProd = np.listaProdutos(categ.getCodigo());
+        jComboProduto.removeAllItems();
+        for (int registro = 0; registro < listProd.size(); registro++){
+            System.out.println(listProd.get(registro));
+            jComboProduto.addItem(listProd.get(registro).getNome());
+        }
+        jComboProduto.setVisible(true);
+        jLabel22.setVisible(true);
+        Quantidade.setVisible(true);
+        Incluir.setVisible(true);        
     }//GEN-LAST:event_ConfirmarCatActionPerformed
 
     private void ConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmarActionPerformed
