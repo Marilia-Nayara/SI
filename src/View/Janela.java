@@ -1439,7 +1439,6 @@ public class Janela extends javax.swing.JFrame {
     }//GEN-LAST:event_IncluirActionPerformed
 
     private void ConfirmarCatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmarCatActionPerformed
- // TODO add your handling code here:
         jLabelProduto.setVisible(true);
         String categoria = jComboCategoria.getSelectedItem().toString();
         NegociosProduto np = new NegociosProduto();
