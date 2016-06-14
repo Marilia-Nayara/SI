@@ -1501,7 +1501,7 @@ public class Janela extends javax.swing.JFrame {
     }//GEN-LAST:event_jConsultasActionPerformed
 
     private void EECancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EECancelarActionPerformed
-        
+      jEstoqueActionPerformed(evt);        
     }//GEN-LAST:event_EECancelarActionPerformed
 
     private void EESalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EESalvarActionPerformed
