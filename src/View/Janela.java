@@ -1526,7 +1526,11 @@ public class Janela extends javax.swing.JFrame {
     }//GEN-LAST:event_EEQuantEntrTextActionPerformed
 
     private void jCCaSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCCaSalvarActionPerformed
-       
+      int codigo;
+        String nome;
+        nome = CCaNomeText.getText();
+        NegociosCategoria nc = new NegociosCategoria();
+        nc.salvar(nome);       
     }//GEN-LAST:event_jCCaSalvarActionPerformed
 
     private void jCPConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCPConfirmarActionPerformed
