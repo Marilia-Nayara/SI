@@ -1650,7 +1650,30 @@ public class Janela extends javax.swing.JFrame {
     }//GEN-LAST:event_CCLimparActionPerformed
 
     private void jCCSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCCSalvarActionPerformed
-        
+// TODO add your handling code here:
+        if(11==CPFText.getText().length()){
+            String cpf;
+            int numero, telefone;
+            cpf = CPFText.getText();
+            numero = Integer.parseInt(NumeroText.getText().trim());
+            telefone = Integer.parseInt(TelefoneText.getText().trim());
+            String nome = NomeText.getText().toUpperCase();
+            String email = EmailText.getText();
+            String rua = LogradouroText.getText();
+            String bairro = BairroText.getText();
+            String cidade = CidadeText.getText();
+            String estado = EstadoText.getText();
+            NegociosCliente nc = new NegociosCliente();
+            try {
+                nc.salvar(cpf, nome, email, rua, numero, bairro, cidade, estado, telefone);
+                LimparCliente();
+            } catch (SQLException ex) {
+                Logger.getLogger(Janela.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(rootPane, "CPF deve conter 11 digitos");
+        }        
     }//GEN-LAST:event_jCCSalvarActionPerformed
 
     private void jCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCategoriaActionPerformed
