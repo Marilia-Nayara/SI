@@ -718,11 +718,6 @@ public class Janela extends javax.swing.JFrame {
         });
 
         jCCaCancelar.setText("Cancelar");
-        jCCaCancelar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCCaCancelarActionPerformed(evt);
-            }
-        });
 
         jPanelCategoria.setLayer(jLabel15, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jPanelCategoria.setLayer(jCCaSalvar, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -1551,7 +1546,27 @@ public class Janela extends javax.swing.JFrame {
     }//GEN-LAST:event_jCPSalvarActionPerformed
 
     private void CAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CAtualizarActionPerformed
-        
+// TODO add your handling code here:
+        String cpf;
+        int numero, telefone;
+        cpf = CPFText.getText();
+        numero = Integer.parseInt(NumeroText.getText().trim());
+        telefone = Integer.parseInt(TelefoneText.getText().trim());
+        String nome = NomeText.getText();
+        String email = EmailText.getText();
+        String rua = LogradouroText.getText();
+        String bairro = BairroText.getText();
+        String cidade = CidadeText.getText();
+        String estado = EstadoText.getText();
+        NegociosCliente nc = new NegociosCliente();
+        try {
+            nc.Atualizar(cpf, nome, email, rua, numero, bairro, cidade, estado, telefone);
+            jConsultasActionPerformed(evt);
+            jClienteActionPerformed(evt);
+
+        } catch (SQLException ex) {
+            Logger.getLogger(Janela.class.getName()).log(Level.SEVERE, null, ex);
+        }        
     }//GEN-LAST:event_CAtualizarActionPerformed
 
     private void CEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CEditarActionPerformed
@@ -1863,10 +1878,6 @@ public class Janela extends javax.swing.JFrame {
     private void jCCaLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCCaLimparActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCCaLimparActionPerformed
-
-    private void jCCaCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCCaCancelarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCCaCancelarActionPerformed
     public void LimparCliente(){
         CPFText.setText("");
         NomeText.setText("");
