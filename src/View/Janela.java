@@ -1563,7 +1563,33 @@ public class Janela extends javax.swing.JFrame {
     }//GEN-LAST:event_jCCConfirmarActionPerformed
 
     private void jCCPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCCPesquisarActionPerformed
-        
+// TODO add your handling code here:
+        String CPF = CPFText.getText();
+        String nome = NomeText.getText();
+        NegociosCliente nc = new NegociosCliente();
+        Cliente cliente = new Cliente();
+        if(CPF.length()!=0){
+            cliente = nc.ProcurarCliente(CPF);
+            CComboNomeText.removeAllItems();
+            CComboNomeText.setVisible(true);
+            NomeText.setVisible(false);
+            CComboNomeText.removeAllItems();
+            CComboNomeText.setEnabled(true);
+            CComboNomeText.addItem(cliente.getNome());
+        }
+        else if(nome.length()!=0){
+            List<Cliente> listCliente = nc.listaCliente(nome);
+            CComboNomeText.setVisible(true);
+            NomeText.setVisible(false);
+            CComboNomeText.removeAllItems();
+            CComboNomeText.setEnabled(true);
+            for (int registro = 0; registro < listCliente.size(); registro++){
+                System.out.println(listCliente.get(registro));
+                CComboNomeText.addItem(listCliente.get(registro).getNome());
+            }
+        }else{
+            JOptionPane.showMessageDialog(rootPane, "PARA REALIZAR A PESQUISA DEVE SER DISPONIBILIZADO O CODIGO OU CATEGORIA");
+        }        
     }//GEN-LAST:event_jCCPesquisarActionPerformed
 
     private void CCLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CCLimparActionPerformed
