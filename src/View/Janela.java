@@ -1555,7 +1555,23 @@ public class Janela extends javax.swing.JFrame {
     }//GEN-LAST:event_CAtualizarActionPerformed
 
     private void CEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CEditarActionPerformed
-       
+// TODO add your handling code here:
+        CPFText.setEnabled(true);
+        CComboNomeText.setVisible(false);
+        String aux = CComboNomeText.getSelectedItem().toString();
+        NomeText.setVisible(true);
+        NomeText.setText(aux);
+        NomeText.setEnabled(true);
+        LogradouroText.setEnabled(true);
+        BairroText.setEnabled(true);
+        NumeroText.setEnabled(true);
+        CidadeText.setEnabled(true);
+        EstadoText.setEnabled(true);
+        EmailText.setEnabled(true);
+        TelefoneText.setEnabled(true);
+        CAtualizar.setVisible(true);
+        CEditar.setVisible(false);
+        CExcluir.setVisible(false);       
     }//GEN-LAST:event_CEditarActionPerformed
 
     private void jCCConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCCConfirmarActionPerformed
