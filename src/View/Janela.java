@@ -1646,7 +1646,7 @@ public class Janela extends javax.swing.JFrame {
     }//GEN-LAST:event_jCCPesquisarActionPerformed
 
     private void CCLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CCLimparActionPerformed
-       
+     LimparCliente();       
     }//GEN-LAST:event_CCLimparActionPerformed
 
     private void jCCSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCCSalvarActionPerformed
