@@ -27,7 +27,11 @@ public void setQuant(int quant) {
         this.quant = quant;
     }
 
-   
+    public Timestamp getDatas() {
+        return datas;
+    }
+
+    
     
 
     
