@@ -1567,7 +1567,21 @@ if(PComboNomeText.getSelectedItem().toString().length()!= 0){
     }//GEN-LAST:event_PCategoriaTextActionPerformed
 
     private void jCPSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCPSalvarActionPerformed
-        
+ int codigo;
+        float pcusto, pvenda;
+        String categoria, nome;
+        nome = PNomeText.getText();
+        pcusto = Float.parseFloat(PP_custoText.getText().trim());
+        pvenda = Float.parseFloat(PP_vendaText.getText().trim());
+        categoria = PCategoriaText.getSelectedItem().toString();
+        NegociosProduto np = new NegociosProduto();
+        try {
+            codigo = np.salvar(nome, pcusto, pvenda, categoria);
+            JOptionPane.showMessageDialog(rootPane, "Salvo com sucesso\n CODIGO DO PRODUTO: "+codigo+"");
+            LimparProduto();
+        }catch(SQLException e){
+            e.printStackTrace();
+        }        
     }//GEN-LAST:event_jCPSalvarActionPerformed
 
     private void CAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CAtualizarActionPerformed
