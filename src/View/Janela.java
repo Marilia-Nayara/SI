@@ -1964,6 +1964,7 @@ if(PComboNomeText.getSelectedItem().toString().length()!= 0){
 
     private void jCCaCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCCaCancelarActionPerformed
         // TODO add your handling code here:
+        jPanelCategoria.setVisible(false);
     }//GEN-LAST:event_jCCaCancelarActionPerformed
     public void LimparCliente(){
         CPFText.setText("");
