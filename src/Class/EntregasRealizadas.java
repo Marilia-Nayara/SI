@@ -31,7 +31,9 @@ public void setQuant(int quant) {
         return datas;
     }
 
-    
+    public void setDatas(Timestamp datas) {
+        this.datas = datas;
+    }
     
 
     
