@@ -23,7 +23,11 @@ public class EntregasRealizadas {
     public int getQuant() {
         return quant;
     }
+public void setQuant(int quant) {
+        this.quant = quant;
+    }
 
+   
     
 
     
