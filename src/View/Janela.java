@@ -80,8 +80,6 @@ public class Janela extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        entityManager = new org.netbeans.modules.form.InvalidComponent();
-        clienteQuery = new org.netbeans.modules.form.InvalidComponent();
         clienteList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : ((javax.persistence.Query)null).getResultList();
         buttonGroup1 = new javax.swing.ButtonGroup();
 
@@ -268,11 +266,6 @@ public class Janela extends javax.swing.JFrame {
             }
         });
 
-        jPanelIcones.setLayer(jEntradaEstoque, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelIcones.setLayer(jCliente, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelIcones.setLayer(jProduto, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelIcones.setLayer(jCategoria, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
         javax.swing.GroupLayout jPanelIconesLayout = new javax.swing.GroupLayout(jPanelIcones);
         jPanelIcones.setLayout(jPanelIconesLayout);
         jPanelIconesLayout.setHorizontalGroup(
@@ -298,6 +291,10 @@ public class Janela extends javax.swing.JFrame {
                 .addComponent(jCategoria)
                 .addContainerGap(556, Short.MAX_VALUE))
         );
+        jPanelIcones.setLayer(jEntradaEstoque, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelIcones.setLayer(jCliente, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelIcones.setLayer(jProduto, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelIcones.setLayer(jCategoria, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelCCliente.setBorder(javax.swing.BorderFactory.createTitledBorder("Dados do Cliente"));
 
@@ -399,11 +396,6 @@ public class Janela extends javax.swing.JFrame {
         });
 
         CCCancelar.setText("Cancelar");
-        CCCancelar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CCCancelarActionPerformed(evt);
-            }
-        });
 
         jCCPesquisar.setVisible(false);
         jCCPesquisar.setText("Pesquisar");
@@ -436,11 +428,6 @@ public class Janela extends javax.swing.JFrame {
 
         CExcluir.setVisible(false);
         CExcluir.setText("Excluir");
-        CExcluir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CExcluirActionPerformed(evt);
-            }
-        });
 
         CAtualizar.setVisible(false);
         CAtualizar.setText("Atualizar");
@@ -449,25 +436,6 @@ public class Janela extends javax.swing.JFrame {
                 CAtualizarActionPerformed(evt);
             }
         });
-
-        jPanelCCliente.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCCliente.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCCliente.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCCliente.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCCliente.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCCliente.setLayer(CPFText, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCCliente.setLayer(NomeText, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCCliente.setLayer(EmailText, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCCliente.setLayer(TelefoneText, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCCliente.setLayer(jCCSalvar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCCliente.setLayer(CCLimpar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCCliente.setLayer(CCCancelar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCCliente.setLayer(jCCPesquisar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCCliente.setLayer(jCCConfirmar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCCliente.setLayer(CComboNomeText, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCCliente.setLayer(CEditar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCCliente.setLayer(CExcluir, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCCliente.setLayer(CAtualizar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jPanelCClienteLayout = new javax.swing.GroupLayout(jPanelCCliente);
         jPanelCCliente.setLayout(jPanelCClienteLayout);
@@ -547,6 +515,24 @@ public class Janela extends javax.swing.JFrame {
                     .addComponent(CCCancelar))
                 .addGap(23, 23, 23))
         );
+        jPanelCCliente.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCCliente.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCCliente.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCCliente.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCCliente.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCCliente.setLayer(CPFText, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCCliente.setLayer(NomeText, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCCliente.setLayer(EmailText, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCCliente.setLayer(TelefoneText, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCCliente.setLayer(jCCSalvar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCCliente.setLayer(CCLimpar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCCliente.setLayer(CCCancelar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCCliente.setLayer(jCCPesquisar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCCliente.setLayer(jCCConfirmar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCCliente.setLayer(CComboNomeText, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCCliente.setLayer(CEditar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCCliente.setLayer(CExcluir, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCCliente.setLayer(CAtualizar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelCProduto.setBorder(javax.swing.BorderFactory.createTitledBorder("Dados do Produto"));
 
@@ -570,18 +556,8 @@ public class Janela extends javax.swing.JFrame {
         });
 
         jCPLimpar.setText("Limpar");
-        jCPLimpar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCPLimparActionPerformed(evt);
-            }
-        });
 
         jCPCancelar.setText("Cancelar");
-        jCPCancelar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCPCancelarActionPerformed(evt);
-            }
-        });
 
         PCategoriaText.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         PCategoriaText.addActionListener(new java.awt.event.ActionListener() {
@@ -608,23 +584,6 @@ public class Janela extends javax.swing.JFrame {
 
         PComboNomeText.setVisible(false);
         PComboNomeText.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jPanelCProduto.setLayer(Codigo, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCProduto.setLayer(jLabel11, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCProduto.setLayer(jLabel12, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCProduto.setLayer(jLabel13, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCProduto.setLayer(jLabel14, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCProduto.setLayer(PCodigoText, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCProduto.setLayer(PNomeText, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCProduto.setLayer(PP_custoText, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCProduto.setLayer(PP_vendaText, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCProduto.setLayer(jCPSalvar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCProduto.setLayer(jCPLimpar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCProduto.setLayer(jCPCancelar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCProduto.setLayer(PCategoriaText, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCProduto.setLayer(jCPPesquisar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCProduto.setLayer(jCPConfirmar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCProduto.setLayer(PComboNomeText, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jPanelCProdutoLayout = new javax.swing.GroupLayout(jPanelCProduto);
         jPanelCProduto.setLayout(jPanelCProdutoLayout);
@@ -698,6 +657,22 @@ public class Janela extends javax.swing.JFrame {
                     .addComponent(jCPCancelar))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+        jPanelCProduto.setLayer(Codigo, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCProduto.setLayer(jLabel11, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCProduto.setLayer(jLabel12, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCProduto.setLayer(jLabel13, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCProduto.setLayer(jLabel14, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCProduto.setLayer(PCodigoText, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCProduto.setLayer(PNomeText, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCProduto.setLayer(PP_custoText, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCProduto.setLayer(PP_vendaText, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCProduto.setLayer(jCPSalvar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCProduto.setLayer(jCPLimpar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCProduto.setLayer(jCPCancelar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCProduto.setLayer(PCategoriaText, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCProduto.setLayer(jCPPesquisar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCProduto.setLayer(jCPConfirmar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCProduto.setLayer(PComboNomeText, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelCategoria.setBorder(javax.swing.BorderFactory.createTitledBorder("Categoria"));
 
@@ -711,19 +686,8 @@ public class Janela extends javax.swing.JFrame {
         });
 
         jCCaLimpar.setText("Limpar");
-        jCCaLimpar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCCaLimparActionPerformed(evt);
-            }
-        });
 
         jCCaCancelar.setText("Cancelar");
-
-        jPanelCategoria.setLayer(jLabel15, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCategoria.setLayer(jCCaSalvar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCategoria.setLayer(jCCaLimpar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCategoria.setLayer(jCCaCancelar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelCategoria.setLayer(CCaNomeText, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jPanelCategoriaLayout = new javax.swing.GroupLayout(jPanelCategoria);
         jPanelCategoria.setLayout(jPanelCategoriaLayout);
@@ -758,6 +722,11 @@ public class Janela extends javax.swing.JFrame {
                     .addComponent(jCCaCancelar))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+        jPanelCategoria.setLayer(jLabel15, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCategoria.setLayer(jCCaSalvar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCategoria.setLayer(jCCaLimpar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCategoria.setLayer(jCCaCancelar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelCategoria.setLayer(CCaNomeText, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPaneEntrEstoque.setBorder(javax.swing.BorderFactory.createTitledBorder("Estoque"));
 
@@ -791,15 +760,6 @@ public class Janela extends javax.swing.JFrame {
                 EECancelarActionPerformed(evt);
             }
         });
-
-        jPaneEntrEstoque.setLayer(jLabel16, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPaneEntrEstoque.setLayer(jLabel17, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPaneEntrEstoque.setLayer(jLabel18, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPaneEntrEstoque.setLayer(EEQuantAtualText, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPaneEntrEstoque.setLayer(EEQuantEntrText, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPaneEntrEstoque.setLayer(EEQuantTotalText, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPaneEntrEstoque.setLayer(EESalvar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPaneEntrEstoque.setLayer(EECancelar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jPaneEntrEstoqueLayout = new javax.swing.GroupLayout(jPaneEntrEstoque);
         jPaneEntrEstoque.setLayout(jPaneEntrEstoqueLayout);
@@ -845,6 +805,14 @@ public class Janela extends javax.swing.JFrame {
                     .addComponent(EECancelar))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
+        jPaneEntrEstoque.setLayer(jLabel16, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPaneEntrEstoque.setLayer(jLabel17, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPaneEntrEstoque.setLayer(jLabel18, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPaneEntrEstoque.setLayer(EEQuantAtualText, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPaneEntrEstoque.setLayer(EEQuantEntrText, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPaneEntrEstoque.setLayer(EEQuantTotalText, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPaneEntrEstoque.setLayer(EESalvar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPaneEntrEstoque.setLayer(EECancelar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jConsultas.setText("Consultas");
         jConsultas.addActionListener(new java.awt.event.ActionListener() {
@@ -860,9 +828,6 @@ public class Janela extends javax.swing.JFrame {
 
         jLHora.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLHora.setForeground(new java.awt.Color(0, 0, 153));
-
-        jLayeredPane1.setLayer(jLData, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jLHora, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -880,6 +845,8 @@ public class Janela extends javax.swing.JFrame {
             .addComponent(jLData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLHora, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
+        jLayeredPane1.setLayer(jLData, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jLHora, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelVenda.setVisible(false);
         jPanelVenda.setBorder(javax.swing.BorderFactory.createTitledBorder("Vendas"));
@@ -980,26 +947,6 @@ public class Janela extends javax.swing.JFrame {
             }
         });
 
-        jPanelVenda.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelVenda.setLayer(jLabel19, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelVenda.setLayer(jComboCliente, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelVenda.setLayer(jLabelCategoria, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelVenda.setLayer(jComboCategoria, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelVenda.setLayer(jComboProduto, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelVenda.setLayer(jLabelProduto, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelVenda.setLayer(jLabel22, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelVenda.setLayer(Quantidade, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelVenda.setLayer(jLabel23, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelVenda.setLayer(jLabel24, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelVenda.setLayer(jDescText, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelVenda.setLayer(jTotalText, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelVenda.setLayer(Confirmar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelVenda.setLayer(ConfirmarCat, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelVenda.setLayer(Incluir, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelVenda.setLayer(jCheckBox1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelVenda.setLayer(jCheckBox2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelVenda.setLayer(Finalizar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
         javax.swing.GroupLayout jPanelVendaLayout = new javax.swing.GroupLayout(jPanelVenda);
         jPanelVenda.setLayout(jPanelVendaLayout);
         jPanelVendaLayout.setHorizontalGroup(
@@ -1090,6 +1037,25 @@ public class Janela extends javax.swing.JFrame {
                     .addComponent(Finalizar))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+        jPanelVenda.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelVenda.setLayer(jLabel19, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelVenda.setLayer(jComboCliente, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelVenda.setLayer(jLabelCategoria, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelVenda.setLayer(jComboCategoria, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelVenda.setLayer(jComboProduto, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelVenda.setLayer(jLabelProduto, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelVenda.setLayer(jLabel22, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelVenda.setLayer(Quantidade, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelVenda.setLayer(jLabel23, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelVenda.setLayer(jLabel24, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelVenda.setLayer(jDescText, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelVenda.setLayer(jTotalText, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelVenda.setLayer(Confirmar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelVenda.setLayer(ConfirmarCat, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelVenda.setLayer(Incluir, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelVenda.setLayer(jCheckBox1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelVenda.setLayer(jCheckBox2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelVenda.setLayer(Finalizar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelRelatorio.setVisible(false);
         jPanelRelatorio.setBorder(javax.swing.BorderFactory.createTitledBorder("Relatorios"));
@@ -1129,12 +1095,6 @@ public class Janela extends javax.swing.JFrame {
             }
         });
 
-        jPanelRelatorio.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelRelatorio.setLayer(jButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelRelatorio.setLayer(jButton4, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelRelatorio.setLayer(jButton5, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelRelatorio.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
         javax.swing.GroupLayout jPanelRelatorioLayout = new javax.swing.GroupLayout(jPanelRelatorio);
         jPanelRelatorio.setLayout(jPanelRelatorioLayout);
         jPanelRelatorioLayout.setHorizontalGroup(
@@ -1170,6 +1130,11 @@ public class Janela extends javax.swing.JFrame {
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
+        jPanelRelatorio.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelRelatorio.setLayer(jButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelRelatorio.setLayer(jButton4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelRelatorio.setLayer(jButton5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelRelatorio.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelRVendidos.setVisible(false);
 
@@ -1195,12 +1160,6 @@ public class Janela extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-
-        jPanelRVendidos.setLayer(jLabel20, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelRVendidos.setLayer(jFormattedDataIn, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelRVendidos.setLayer(jLabel21, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelRVendidos.setLayer(jFormattedDataFin, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelRVendidos.setLayer(jButton6, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jPanelRVendidosLayout = new javax.swing.GroupLayout(jPanelRVendidos);
         jPanelRVendidos.setLayout(jPanelRVendidosLayout);
@@ -1231,22 +1190,11 @@ public class Janela extends javax.swing.JFrame {
                     .addComponent(jButton6))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
-
-        jPanelMenu.setLayer(jInicio, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelMenu.setLayer(jCadastros, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelMenu.setLayer(jEstoque, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelMenu.setLayer(jVenda, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelMenu.setLayer(jRelatorios, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelMenu.setLayer(jPanelIcones, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelMenu.setLayer(jPanelCCliente, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelMenu.setLayer(jPanelCProduto, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelMenu.setLayer(jPanelCategoria, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelMenu.setLayer(jPaneEntrEstoque, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelMenu.setLayer(jConsultas, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelMenu.setLayer(jLayeredPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelMenu.setLayer(jPanelVenda, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelMenu.setLayer(jPanelRelatorio, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jPanelMenu.setLayer(jPanelRVendidos, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelRVendidos.setLayer(jLabel20, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelRVendidos.setLayer(jFormattedDataIn, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelRVendidos.setLayer(jLabel21, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelRVendidos.setLayer(jFormattedDataFin, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelRVendidos.setLayer(jButton6, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jPanelMenuLayout = new javax.swing.GroupLayout(jPanelMenu);
         jPanelMenu.setLayout(jPanelMenuLayout);
@@ -1315,6 +1263,21 @@ public class Janela extends javax.swing.JFrame {
                 .addComponent(jPanelRVendidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(40, Short.MAX_VALUE))
         );
+        jPanelMenu.setLayer(jInicio, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelMenu.setLayer(jCadastros, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelMenu.setLayer(jEstoque, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelMenu.setLayer(jVenda, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelMenu.setLayer(jRelatorios, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelMenu.setLayer(jPanelIcones, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelMenu.setLayer(jPanelCCliente, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelMenu.setLayer(jPanelCProduto, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelMenu.setLayer(jPanelCategoria, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelMenu.setLayer(jPaneEntrEstoque, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelMenu.setLayer(jConsultas, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelMenu.setLayer(jLayeredPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelMenu.setLayer(jPanelVenda, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelMenu.setLayer(jPanelRelatorio, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelMenu.setLayer(jPanelRVendidos, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1552,7 +1515,32 @@ public class Janela extends javax.swing.JFrame {
     }//GEN-LAST:event_jCPConfirmarActionPerformed
 
     private void jCPPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCPPesquisarActionPerformed
-        
+ String codigo = PCodigoText.getText();
+        String categoria = PCategoriaText.getSelectedItem().toString();
+        NegociosProduto nb = new NegociosProduto();
+        Produto produto = new Produto();
+        if(codigo.length()!=0){
+            int codig = Integer.parseInt(codigo);
+            produto = nb.ProcurarProduto(codig);
+            PComboNomeText.removeAllItems();
+            PCodigoText.setText(""+produto.getCodigo());
+            PComboNomeText.addItem(produto.getNome());
+
+        }
+        else if(categoria.length()!=0){
+            NegociosCategoria nc = new NegociosCategoria();
+            Categoria categ = nc.ProcurarCategoria(categoria);
+            List<Produto> listProd = nb.listaProdutos(categ.getCodigo());
+            PComboNomeText.removeAllItems();
+            PCategoriaText.setEnabled(false);
+            PComboNomeText.setEnabled(true);
+            for (int registro = 0; registro < listProd.size(); registro++){
+                System.out.println(listProd.get(registro));
+                PComboNomeText.addItem(listProd.get(registro).getNome());
+            }
+        }else{
+            JOptionPane.showMessageDialog(rootPane, "PARA REALIZAR A PESQUISA DEVE SER DISPONIBILIZADO O CODIGO OU CATEGORIA");
+        }        
     }//GEN-LAST:event_jCPPesquisarActionPerformed
 
     private void PCategoriaTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PCategoriaTextActionPerformed
@@ -2384,8 +2372,6 @@ public class Janela extends javax.swing.JFrame {
     private javax.swing.JTextField TelefoneText;
     private javax.swing.ButtonGroup buttonGroup1;
     private java.util.List<View.Cliente> clienteList;
-    private org.netbeans.modules.form.InvalidComponent clienteQuery;
-    private org.netbeans.modules.form.InvalidComponent entityManager;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
