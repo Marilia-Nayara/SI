@@ -1511,7 +1511,26 @@ public class Janela extends javax.swing.JFrame {
     }//GEN-LAST:event_jCCaSalvarActionPerformed
 
     private void jCPConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCPConfirmarActionPerformed
-       
+if(PComboNomeText.getSelectedItem().toString().length()!= 0){
+            String Nome = PComboNomeText.getSelectedItem().toString();
+            NegociosProduto np = new NegociosProduto();
+            Produto produto = np.ProcurarProduto(Nome);
+            PCodigoText.setText(""+produto.getCodigo());
+            PComboNomeText.removeAllItems();
+            PComboNomeText.addItem(produto.getNome());
+            PComboNomeText.setEnabled(false);
+            PP_custoText.setText(""+produto.getPcusto());
+            PP_custoText.setEnabled(false);
+            PP_vendaText.setText(""+produto.getPvenda());
+            PP_vendaText.setEnabled(false);
+            PCategoriaText.removeAllItems();
+            PCategoriaText.addItem(produto.getCategoria().getNome());
+            EEQuantAtualText.setText(""+produto.getQuantidade());
+            EEQuantAtualText.setEnabled(false);
+            EEQuantTotalText.setText(""+produto.getQuantidade());
+            EEQuantTotalText.setEnabled(false);
+            jPaneEntrEstoque.setVisible(true);
+        }       
     }//GEN-LAST:event_jCPConfirmarActionPerformed
 
     private void jCPPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCPPesquisarActionPerformed
