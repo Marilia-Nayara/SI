@@ -83,6 +83,27 @@ public class BancoRelatorio {
         }
     }
     
-   
+  public List<Entrega> Entregas(){
+        List<Entrega> resultado = new ArrayList<Entrega>();
+        ConectaBanco cb = new ConectaBanco();
+        cb.conectar();
+        String sql = "SELECT to_char(DAT , 'DAY') dia_semana, COUNT(ISENTREGA) contador FROM COMPRA WHERE ISENTREGA = 'true' GROUP BY to_char(DAT, 'DAY') ORDER BY contador DESC";
+        
+        try {
+            cb.preparedStatement = cb.connection.prepareStatement(sql);
+            cb.resultSet = cb.preparedStatement.executeQuery();
+            while(cb.resultSet.next()){
+                Entrega temp = new Entrega();
+                temp.setDia(cb.resultSet.getString("dia_semana"));
+                temp.setQuant(cb.resultSet.getInt("contador"));
+                resultado.add(temp);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(BancoRelatorio.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return resultado;
+        
+    }
+      
    
 }
