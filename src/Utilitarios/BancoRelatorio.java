@@ -60,5 +60,29 @@ public class BancoRelatorio {
         }
     }
     
+     public List<EntregasRealizadas> EntregasRealizadas(){
+        List<EntregasRealizadas> resultado = new ArrayList<EntregasRealizadas>();
+        ConectaBanco cb = new ConectaBanco();
+        cb.conectar();
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        String sql = "SELECT COUNT(*), CAST(DAT AS DATE) DIA FROM COMPRA WHERE ISENTREGA = 'true' GROUP BY DAT";
+        
+        try {
+            cb.preparedStatement = cb.connection.prepareStatement(sql);
+            cb.resultSet = cb.preparedStatement.executeQuery();
+            while(cb.resultSet.next()){
+                EntregasRealizadas temp = new EntregasRealizadas();
+                temp.setQuant(cb.resultSet.getInt("COUNT(*)"));
+                temp.setDatas(cb.resultSet.getTimestamp("DIA"));
+                resultado.add(temp);
+            }
+            return resultado;
+        } catch (SQLException ex) {
+            Logger.getLogger(BancoRelatorio.class.getName()).log(Level.SEVERE, null, ex);
+            return resultado;
+        }
+    }
+    
+   
    
 }
