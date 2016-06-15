@@ -17,6 +17,13 @@ public class EntregasRealizadas {
     private int quant;
     private Timestamp datas;
 
+    public EntregasRealizadas() {
+    }
+
+    public int getQuant() {
+        return quant;
+    }
+
     
 
     
