@@ -1502,7 +1502,19 @@ public class Janela extends javax.swing.JFrame {
     }//GEN-LAST:event_EECancelarActionPerformed
 
     private void EESalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EESalvarActionPerformed
-        
+       // TODO add your handling code here:
+        int quant, codigo;
+        quant = Integer.parseInt(EEQuantTotalText.getText().trim());
+        codigo = Integer.parseInt(PCodigoText.getText().trim());
+        NegociosProduto np = new NegociosProduto();
+        try{
+            np.UpdateProduto(quant, codigo);
+            JOptionPane.showMessageDialog(rootPane, "Atualizado!");
+            jCPPesquisarActionPerformed(evt);
+            jEntradaEstoqueActionPerformed(evt);
+        }catch(Error e){
+            e.printStackTrace();
+        } 
     }//GEN-LAST:event_EESalvarActionPerformed
 
     private void EEQuantEntrTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_EEQuantEntrTextFocusLost
