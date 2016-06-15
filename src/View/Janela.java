@@ -556,8 +556,18 @@ public class Janela extends javax.swing.JFrame {
         });
 
         jCPLimpar.setText("Limpar");
+        jCPLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCPLimparActionPerformed(evt);
+            }
+        });
 
         jCPCancelar.setText("Cancelar");
+        jCPCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCPCancelarActionPerformed(evt);
+            }
+        });
 
         PCategoriaText.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         PCategoriaText.addActionListener(new java.awt.event.ActionListener() {
@@ -686,8 +696,18 @@ public class Janela extends javax.swing.JFrame {
         });
 
         jCCaLimpar.setText("Limpar");
+        jCCaLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCCaLimparActionPerformed(evt);
+            }
+        });
 
         jCCaCancelar.setText("Cancelar");
+        jCCaCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCCaCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelCategoriaLayout = new javax.swing.GroupLayout(jPanelCategoria);
         jPanelCategoria.setLayout(jPanelCategoriaLayout);
@@ -1939,7 +1959,12 @@ if(PComboNomeText.getSelectedItem().toString().length()!= 0){
 
     private void jCCaLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCCaLimparActionPerformed
         // TODO add your handling code here:
+         CCaNomeText.setText("");
     }//GEN-LAST:event_jCCaLimparActionPerformed
+
+    private void jCCaCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCCaCancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCCaCancelarActionPerformed
     public void LimparCliente(){
         CPFText.setText("");
         NomeText.setText("");

@@ -770,11 +770,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Limpar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCPLimparActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jCPCancelar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cancelar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCPCancelarActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JComboBox" name="PCategoriaText">
               <Properties>
@@ -899,11 +905,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Limpar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCCaLimparActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jCCaCancelar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cancelar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCCaCancelarActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="CCaNomeText">
             </Component>
