@@ -126,5 +126,30 @@ public class BancoRelatorio {
         return resultado;
         
     }
-     
+     public List<Entrega> Localidades(){
+        List<Entrega> resultado = new ArrayList<Entrega>();
+        ConectaBanco cb = new ConectaBanco();
+        cb.conectar();
+        String sql = "SELECT (CL.BAIRRO) bairro, COUNT(CO.ISENTREGA) QEntregas" +
+                     "  FROM CLIENTE CL, COMPRA CO" +
+                     "  WHERE CO.CPF_C = CL.CODIGO" +
+                     "    AND ISENTREGA = 'true'" +
+                     " GROUP BY CL.BAIRRO" +
+                     " ORDER BY QEntregas";
+        
+        try {
+            cb.preparedStatement = cb.connection.prepareStatement(sql);
+            cb.resultSet = cb.preparedStatement.executeQuery();
+            while(cb.resultSet.next()){
+                Entrega temp = new Entrega();
+                temp.setDia(cb.resultSet.getString("bairro"));
+                temp.setQuant(cb.resultSet.getInt("QEntregas"));
+                resultado.add(temp);
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(BancoRelatorio.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return resultado;
+    } 
 }
